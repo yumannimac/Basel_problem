@@ -2,18 +2,17 @@
 
 <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-# レポート
-　今回の課題では
- 
+# バーゼル問題
+バーゼル問題を解く。すなわち
+
 $$
 S=\lim_{n \to \infty }\sum_{k=1}^{n} \frac{1}{k^2}=\frac{\pi ^2}{6} 
 $$
 
-の証明をする必要があった。それをする。
+の証明をする。
 
-## 補題
-$\mathbb{R}^2$
-において$C^2$級の関数を考える。これはフーリエ級数展開できる。
+## 証明
+$\mathbb{R}^2$において$C^2$級の関数を考える。これはフーリエ級数展開できる。
 $C^2$級の関数の例を考える。
 
 $$
@@ -25,6 +24,7 @@ $$
 $$
 f'\left(x\right) =2x
 $$
+
 
 $$
 f''\left(x\right) =2
@@ -68,18 +68,59 @@ $$
 $$
 \begin{split}
   \sum_{n=1}^{\infty } \frac{\left(-1\right) ^n}{n^2}
-  &= 
+  &=\, 
 -\frac{1}{1^2}+\frac{1}{2^2}-\frac{1}{3^2}+\frac{1}{4^2}+\dots \\
-&= -\left(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots\right) +2 \left(\frac{1}{2^2}+\frac{1}{4^2}+\dots\right) \\
-&= -S+\frac{1}{2}\left(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots\right) \\
-&= -\frac{S}{2}
+&=\, -\left(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots\right) +2 \left(\frac{1}{2^2}+\frac{1}{4^2}+\dots\right) \\
+&=\, -S+\frac{1}{2}\left(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots\right) \\
+&=\, -\frac{S}{2}
 \end{split}
 $$
 
 であるから
 
 $$
-S=\sum_{n=1}^{\infty } \frac{1}{n^2}
+S=\sum_{n=1}^{\infty } \frac{1}{n^2}=\frac{\pi ^2}{6}
 $$
 
 が示された。$\square$
+
+<!--
+したがって以下が成り立つ。
+
+$$
+a+b=c
+$$
+
+示された。$\sin ^2x+\cos ^2x=1$を考える$\infty$に飛ばすと$\infty$になる。
+
+$$
+\sin x+\cos x=1
+$$
+
+を解きたい。さて考え方を変えると三角関数の合成公式を用いると
+
+$$
+\sqrt{2}\sin \left(x+\frac{\pi }{4}\right) =1 \Leftrightarrow 
+x+\frac{\pi }{4}=\frac{\pi }{2}\pm \frac{\pi }{4}+2n \pi 
+\Leftrightarrow
+x=\frac{\pi }{4}\pm \frac{\pi }{4}+2n \pi 
+$$
+
+
+$\frac{dx}{dt}$を求めよう。
+
+$$
+\begin{pmatrix}
+1\\ 2\\ 3\\ 
+\end{pmatrix}
+$$
+
+
+$$
+\begin{pmatrix}
+1&2\\ 3&4
+\end{pmatrix}
+$$
+
+であるから
+-->
